@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lex Reynolds</title>
+<meta name="description" content="Lex Reynolds, computer science student at Clemson University. Web development, databases, and web security.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+<header class="intro">
+  <h1>Lex Reynolds</h1>
+  <p class="lede">Computer science student at Clemson University, graduating May 2027 with a minor in artificial intelligence. I build web applications in PHP and PostgreSQL, and I spend most of my time on making them fast, correct, and secure.</p>
+  <nav class="links">
+    <a href="https://github.com/lexreynolds03">GitHub</a>
+    <a href="https://linkedin.com/in/lexreynolds">LinkedIn</a>
+    <a href="mailto:Sreyno8@clemson.edu">Sreyno8@clemson.edu</a>
+  </nav>
+</header>
+
+<section>
+  <h2>Projects</h2>
+
+  <article class="project">
+    <a class="shot" href="https://trueworngear.com"><img src="img/trueworngear.jpg" alt="TrueWornGear homepage" width="1100" height="688" loading="lazy"></a>
+    <div class="row">
+      <h3><a href="https://trueworngear.com">TrueWornGear</a></h3>
+      <span class="meta">Co-owner and lead developer · 2026</span>
+    </div>
+    <p>An online store for college athletic apparel. I co-own the business and I'm its only developer, so I designed and built everything: the storefront, checkout, customer accounts, and the internal tools we use to run it.</p>
+    <p class="stack">PHP 8.3 · PostgreSQL · Stripe · Google OAuth · Gmail API · nginx · Cloudflare</p>
+    <details>
+      <summary>What I built</summary>
+      <ul>
+        <li>A storefront written without a framework, with a small custom router and view layer. Pages are server-rendered and the storefront runs without client-side JavaScript outside of checkout.</li>
+        <li>Catalog search with multi-select filters for sport, school, size, type, and color, backed by indexes so it stays fast as inventory grows.</li>
+        <li>A cart that places a timed hold on single-quantity items so two shoppers can't buy the same piece, with Stripe Checkout and webhook-driven order fulfillment.</li>
+        <li>A custom CRM for inventory, orders, customer email, returns, sales tax, and athlete commissions.</li>
+        <li>An admin inbox built on the Gmail API, so customer support runs from the same dashboard as everything else. It syncs incrementally and sanitizes incoming HTML before rendering it.</li>
+        <li>Server-side analytics with a checkout funnel report covering traffic sources, cart abandonment, and sales.</li>
+        <li>580+ automated tests, an error-monitoring dashboard, and a health check endpoint to catch regressions before each release.</li>
+      </ul>
+    </details>
+  </article>
+
+  <article class="project">
+    <a class="shot" href="https://compscai.com"><img src="img/compscai.jpg" alt="compscai homepage" width="1100" height="688" loading="lazy"></a>
+    <div class="row">
+      <h3><a href="https://compscai.com">compscai</a></h3>
+      <span class="meta">Personal site · 2026</span>
+    </div>
+    <p>My technical blog. I write up how things actually work, mostly web security, database internals, performance, and machine learning, usually based on problems I ran into while building.</p>
+    <p class="stack">PHP 8.3 · PostgreSQL · Markdown · nginx · Cloudflare</p>
+    <details>
+      <summary>What I built</summary>
+      <ul>
+        <li>A server-rendered publishing system with Markdown posts and syntax-highlighted code blocks.</li>
+        <li>Topics with nested sub-topics, a topic directory, and search across topics and posts.</li>
+        <li>Public comments with spam filtering, rate limiting, and a moderation queue in the admin panel.</li>
+        <li>Shares its architecture with TrueWornGear, so improvements on one site carry over to the other.</li>
+      </ul>
+    </details>
+  </article>
+
+  <div class="small-projects">
+    <div class="small">
+      <div class="row">
+        <h3><a href="https://github.com/lexreynolds03/workoutweighttracker">Iron Log</a></h3>
+        <span class="meta">JavaScript · HTML · CSS</span>
+      </div>
+      <p>A workout tracker that runs entirely in the browser. It logs sets, saves routines, charts progress with estimated one-rep maxes and personal records, and imports and exports data as JSON.</p>
+    </div>
+    <div class="small">
+      <div class="row">
+        <h3><a href="https://github.com/lexreynolds03/CPSC4420-Q-Learning">Taxi Q-Learning</a></h3>
+        <span class="meta">Python · Gymnasium</span>
+      </div>
+      <p>Trained a Q-learning agent on Gymnasium's Taxi-v4 and compared learning rate, discount factor, and epsilon decay settings. The final agent completed 100% of 100 evaluation episodes.</p>
+    </div>
+    <div class="small">
+      <div class="row">
+        <h3><a href="https://github.com/lexreynolds03/DataFilterFlask">CSV Data Filter</a></h3>
+        <span class="meta">Python · Flask</span>
+      </div>
+      <p>A small Flask app that loads computer part data from a CSV and filters it by name, type, and brand as you type.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <details class="job">
+    <summary>
+      <span class="job-title"><strong>TrueWornGear</strong> Co-Owner and Lead Developer</span>
+      <span class="meta">June 2026 to present</span>
+    </summary>
+    <ul>
+      <li>Co-owned and operated an online store for college athletic apparel as the business's sole software developer</li>
+      <li>Designed and built trueworngear.com from scratch in PHP and PostgreSQL with Stripe and Google sign-in</li>
+      <li>Developed a custom CRM for inventory, orders, customer email, returns, sales tax, and athlete commissions</li>
+      <li>Integrated a Gmail API inbox into the CRM so customer support runs from one admin dashboard</li>
+      <li>Tracked traffic sources, cart abandonment, and sales with server-side analytics and a checkout funnel report</li>
+      <li>Maintained 580+ automated tests and an error-monitoring dashboard to catch regressions before each release</li>
+    </ul>
+  </details>
+
+  <details class="job">
+    <summary>
+      <span class="job-title"><strong>UMG Lab</strong> Software Development Intern</span>
+      <span class="meta">May 2026 to November 2027</span>
+    </summary>
+    <ul>
+      <li>Rebuilt an 8,200-product jewelry e-commerce site with database-driven routing, search, and Stripe checkout</li>
+      <li>Built a product recommendation engine in SQL using TF-IDF and cosine similarity across 8,200+ products</li>
+      <li>Developed checkout funnel analytics to track cart abandonment, time per step, and payment failures</li>
+      <li>Created a staff admin portal with sales reports, CSV exports, global search, and an automated test suite</li>
+      <li>Audited a realtor safety app and fixed 85+ bugs, including account takeover, XSS, and IDOR vulnerabilities</li>
+      <li>Hardened client servers with security headers, CSRF protection, login rate limiting, and nginx access rules</li>
+      <li>Redesigned mobile layouts for 10+ client service pages, fixing breakpoints and enlarging tap targets</li>
+    </ul>
+  </details>
+
+  <details class="job">
+    <summary>
+      <span class="job-title"><strong>MAHLE</strong> Digitalization Intern</span>
+      <span class="meta">May 2025 to December 2025</span>
+    </summary>
+    <ul>
+      <li>Managed and updated production databases supporting automotive component manufacturing lines</li>
+      <li>Built Excel part test history sheets linked to the production database with SQL and VBA to confirm parts passed</li>
+      <li>Wrote Python, SQL, and VBA scripts and created new documentation for the production database</li>
+      <li>Worked with the team to develop tests for new assembly line projects to validate part quality before launch</li>
+      <li>Created Excel dashboards to display production metrics and test results for engineering and quality teams</li>
+      <li>Improved search for part-failure claims, helping teams locate broken-part records and root causes faster</li>
+    </ul>
+  </details>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="row">
+    <p><strong>Clemson University</strong><br>B.S. Computer Science, minor in Artificial Intelligence</p>
+    <span class="meta">May 2027</span>
+  </div>
+  <p class="activities">Clemson Artificial Intelligence Club · ACM Student Chapter</p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>PHP, SQL (PostgreSQL), C, C++, Python, Java, VBA, HTML, CSS</dd>
+    <dt>Focus</dt><dd>Database design, query optimization, web security, responsive UI, data analysis</dd>
+    <dt>Tools</dt><dd>Git, Linux, nginx, REST APIs, PHPUnit, Stripe, Claude Code</dd>
+    <dt>Certified</dt><dd>Microsoft Office Specialist</dd>
+  </dl>
+</section>
+
+<footer>
+  <p>Lex Reynolds · Clemson, SC</p>
+</footer>
+
+</main>
+</body>
+</html>

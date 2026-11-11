@@ -1,0 +1,166 @@
+:root {
+  --bg: #fbfaf7;
+  --text: #1c1b19;
+  --muted: #6b6760;
+  --rule: #e4e0d8;
+  --accent: #8a3b12;
+  --shot-border: #ddd8ce;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141412;
+    --text: #e8e5df;
+    --muted: #9a958c;
+    --rule: #2c2a26;
+    --accent: #e0956a;
+    --shot-border: #33302b;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 16px/1.65 "Public Sans", system-ui, sans-serif;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 72px 20px 48px;
+}
+
+a { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+a:hover { color: var(--accent); text-decoration-color: currentColor; }
+
+h1, h2, h3 { font-weight: 500; margin: 0; }
+
+h1 {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 28px;
+}
+
+h3 {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 23px;
+}
+h3 a { text-decoration: none; }
+
+p { margin: 0 0 12px; }
+
+.intro { margin-bottom: 72px; }
+.lede { font-size: 18px; margin-top: 18px; max-width: 60ch; }
+
+.links { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 20px; font-weight: 500; }
+.links a { text-decoration: none; border-bottom: 1px solid var(--rule); }
+.links a:hover { border-color: currentColor; }
+
+section { margin-bottom: 64px; }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.meta { color: var(--muted); font-size: 14px; white-space: nowrap; }
+
+.project { margin-bottom: 52px; }
+.shot { display: block; margin-bottom: 18px; }
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--shot-border);
+  border-radius: 4px;
+}
+.stack { color: var(--muted); font-size: 14px; }
+
+details { margin-top: 4px; }
+summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 500;
+  color: var(--accent);
+  font-size: 15px;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before {
+  content: "+";
+  display: inline-block;
+  width: 1.1em;
+  font-weight: 400;
+}
+details[open] > summary::before { content: "\2212"; }
+
+details ul { margin: 12px 0 0; padding-left: 1.1em; }
+details li { margin-bottom: 6px; }
+details li::marker { color: var(--muted); }
+
+.small-projects { padding-top: 8px; }
+.small { padding: 18px 0; border-top: 1px solid var(--rule); }
+.small p { margin: 0; max-width: 62ch; }
+.small h3 { font-size: 19px; }
+.small p { font-size: 15px; }
+
+.job { border-bottom: 1px solid var(--rule); padding: 14px 0; margin: 0; }
+.job:first-of-type { padding-top: 0; }
+.job summary {
+  display: grid;
+  grid-template-columns: 1.1em 1fr auto;
+  align-items: baseline;
+  column-gap: 12px;
+  color: var(--text);
+  font-weight: 400;
+  font-size: 16px;
+}
+.job summary::before { color: var(--accent); width: auto; }
+.job-title { flex: 1; min-width: 0; }
+.job-title strong { font-weight: 600; margin-right: 6px; }
+.job summary:hover .job-title strong { color: var(--accent); }
+.job ul { padding-left: 2.2em; margin-bottom: 6px; font-size: 15px; }
+
+.activities { color: var(--muted); font-size: 15px; }
+
+.skills {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 8px 20px;
+  margin: 0;
+}
+.skills dt { color: var(--muted); font-size: 14px; padding-top: 1px; }
+.skills dd { margin: 0; }
+
+footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); padding-top: 20px; }
+
+@media (max-width: 600px) {
+  main { padding-top: 48px; }
+  h1 { font-size: 36px; }
+  .intro { margin-bottom: 56px; }
+  .skills { grid-template-columns: 1fr; gap: 2px; }
+  .skills dd { margin-bottom: 10px; }
+  .meta { white-space: normal; }
+  .job summary { grid-template-columns: 1.1em 1fr; }
+  .job summary .meta { grid-column: 2; font-size: 13px; }
+  .job-title strong { display: block; }
+}
